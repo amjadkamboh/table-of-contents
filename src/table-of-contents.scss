@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import "./variables.scss";
+
+// @TODO remove this file when used with original theme
+@import "./global.scss";
+
+.table-of-contents {
+	@include dropshadow-card;
+	background-color: white;
+	border: 1px solid $navy-200;
+	border-bottom-right-radius: $card-borderradius;
+	max-width: 50%;
+	margin-bottom: $spacing-lg;
+	font-family: 'Rubik';
+
+	.table-of-contents-header {
+		display: flex;
+		padding: $spacing-md;
+		padding-left: $spacing-lg;
+	}
+
+	.table-of-contents-title {
+		color: $navy-950;
+		font-family: 'Rubik';
+		::before{
+			display: none;
+		}
+
+
+	}
+
+	.table-of-contents-skip-section {
+		@include paragraph-xs;
+		color: $gray-600;
+		padding-left: $spacing-md;
+		font-family: 'Rubik';
+	}
+
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding-left: $spacing-sm;
+	}
+
+	ul li {
+		@include paragraph;
+		margin: $spacing-md;
+		display: flex;
+	}
+
+	ul li a {
+		color: $navy-950;
+		font-family: 'Rubik';
+	}
+
+	li::before {
+		content: url('./arrow-left-down.svg');
+		height: 30px;
+		width: 30px;
+	}
+}
+.wp-admin .table-of-contents {
+    a{
+        pointer-events: none;
+    }
+    max-width: 100%;
+}

@@ -1,0 +1,16 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ */
+
+ @import "./table-of-contents.scss";
+
+.lend-locationtable-title.has-icon {
+	padding-right: 0;
+	justify-content: end;
+	float: right;
+}
+
+.block-editor-block-inspector .components-base-control.lend-title {
+	margin-bottom: 0;
+}

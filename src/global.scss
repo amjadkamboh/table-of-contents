@@ -1,0 +1,395 @@
+$breakpoints: (
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1400px
+); // for media-include module
+
+h1,
+.heading-1,
+h2,
+.heading-2,
+h3,
+.heading-3,
+h4,
+.heading-4,
+h5,
+.heading-5,
+h6,
+.heading-6 {
+	color: $blue-950;
+}
+
+.heading-1 {
+	font-family: $heading-1-font-family, sans-serif;
+	font-weight: $heading-1-font-weight;
+	line-height: $heading-1-line-height;
+	font-size: $heading-1-font-size;
+	letter-spacing: $heading-1-letter-spacing;
+	text-indent: $heading-1-paragraph-spacing;
+	text-transform: $heading-1-text-case;
+	text-decoration: $heading-1-text-decoration;
+	margin-top: $spacing-lg;
+	margin-bottom: $spacing-md;
+}
+
+h1,
+.heading-2 {
+	font-family: $heading-2-font-family, sans-serif;
+	font-weight: $heading-2-font-weight;
+	line-height: $heading-2-line-height;
+	font-size: $heading-2-font-size;
+	letter-spacing: $heading-2-letter-spacing;
+	text-indent: $heading-2-paragraph-spacing;
+	text-transform: $heading-2-text-case;
+	text-decoration: $heading-2-text-decoration;
+	margin-top: $spacing-md;
+	margin-bottom: $spacing-md;
+
+}
+
+.heading-3 {
+	font-family: $heading-3-font-family, sans-serif;
+	font-weight: $heading-3-font-weight;
+	line-height: $heading-3-line-height;
+	font-size: $heading-3-font-size;
+	letter-spacing: $heading-3-letter-spacing;
+	text-indent: $heading-3-paragraph-spacing;
+	text-transform: $heading-3-text-case;
+	text-decoration: $heading-3-text-decoration;
+	margin-top: $spacing-lg;
+	margin-bottom: $spacing-md;
+}
+
+h2,
+.heading-4 {
+	font-family: $heading-4-font-family, sans-serif;
+	font-weight: $heading-4-font-weight;
+	line-height: $heading-4-line-height;
+	font-size: $heading-4-font-size;
+	letter-spacing: $heading-4-letter-spacing;
+	text-indent: $heading-4-paragraph-spacing;
+	text-transform: $heading-4-text-case;
+	text-decoration: $heading-4-text-decoration;
+	margin-top: $spacing-lg;
+	margin-bottom: $spacing-md;
+}
+
+h3,
+.heading-5 {
+	font-family: $heading-5-font-family, sans-serif;
+	font-weight: $heading-5-font-weight;
+	line-height: $heading-5-line-height;
+	font-size: $heading-5-font-size;
+	letter-spacing: $heading-5-letter-spacing;
+	text-indent: $heading-5-paragraph-spacing;
+	text-transform: $heading-5-text-case;
+	text-decoration: $heading-5-text-decoration;
+	margin-top: $spacing-lg;
+	margin-bottom: $spacing-md;
+}
+
+h4,
+.heading-6 {
+	font-family: $heading-6-font-family, sans-serif;
+	font-weight: $heading-6-font-weight;
+	line-height: $heading-6-line-height;
+	font-size: $heading-6-font-size;
+	letter-spacing: $heading-6-letter-spacing;
+	text-indent: $heading-6-paragraph-spacing;
+	text-transform: $heading-6-text-case;
+	text-decoration: $heading-6-text-decoration;
+	margin-top: $spacing-lg;
+	margin-bottom: $spacing-md;
+}
+
+// 
+// Buttons
+//
+
+@mixin le-button-primary {
+	background-color: $yellow-500;
+	color: $navy-950;
+	padding-top: $spacing-sm;
+	padding-bottom: $spacing-sm;
+	padding-left: $spacing-md;
+	padding-right: $spacing-md;
+	border-radius: $border-radius-sm;
+	text-decoration: none;
+	font-weight: $fontweight-medium;
+
+	&:hover {
+		background-color: $yellow-600;
+		color: $navy-950;
+	}
+
+	&:active {
+		border: 1px solid $navy-700;
+	}
+}
+
+.le-button-primary {
+	@include le-button-primary;
+}
+
+.le-button-primary-sm {
+	@include le-button-primary;
+	padding-top: $spacing-xs;
+	padding-bottom: $spacing-xs;
+	font-size: $font-size-0;
+}
+
+.le-button-primary-lg {
+	@include le-button-primary;
+	font-size: $font-size-3;
+}
+
+@mixin le-button-primary-disabled {
+	background-color: $gray-300;
+	color: $gray-500;
+	padding-top: $spacing-sm;
+	padding-bottom: $spacing-sm;
+	padding-left: $spacing-md;
+	padding-right: $spacing-md;
+	border-radius: $border-radius-sm;
+	text-decoration: none;
+	font-weight: $fontweight-medium;
+
+	&:hover {
+		color: $gray-500;
+	}
+}
+
+.le-button-primary-disabled {
+	@include le-button-primary-disabled;
+}
+
+.le-button-primary-disabled-sm {
+	@include le-button-primary-disabled;
+	padding-bottom: $spacing-xs;
+	padding-top: $spacing-xs;
+	font-size: $font-size-0;
+}
+
+.le-button-primary-disabled-lg {
+	@include le-button-primary-disabled;
+	font-size: $font-size-3;
+}
+
+@mixin le-button-ghost {
+	background-color: $blue-50;
+	color: $navy-950;
+	padding-top: $spacing-sm;
+	padding-bottom: $spacing-sm;
+	padding-left: $spacing-md;
+	padding-right: $spacing-md;
+	border: 1px solid $navy-900;
+	border-radius: $border-radius-sm;
+	text-decoration: none;
+	font-weight: $fontweight-medium;
+
+	&:hover {
+		background-color: $blue-200;
+		color: $navy-950;
+	}
+
+	&:active {
+		border: 1px solid $blue-300;
+	}
+}
+
+.le-button-ghost {
+	@include le-button-ghost;
+}
+
+.le-button-ghost-sm {
+	@include le-button-ghost;
+	padding-top: $spacing-xs;
+	padding-bottom: $spacing-xs;
+	font-size: $font-size-0;
+}
+
+.le-button-ghost-lg {
+	@include le-button-ghost;
+	font-size: $font-size-3;
+}
+
+.le-button-ghost-disabled {
+	@include le-button-primary-disabled;
+}
+
+.le-button-ghost-disabled-sm {
+	@include le-button-primary-disabled;
+	padding-bottom: $spacing-xs;
+	padding-top: $spacing-xs;
+	font-size: $font-size-0;
+}
+
+.le-button-ghost-disabled-lg {
+	@include le-button-primary-disabled;
+	font-size: $font-size-3;
+}
+
+
+// 
+// Paragraphs
+//
+
+@mixin paragraph-xs {
+	font-family: $paragraph-xs-font-family;
+	font-weight: $paragraph-xs-font-weight;
+	line-height: $paragraph-xs-line-height;
+	font-size: $paragraph-xs-font-size;
+	letter-spacing: $paragraph-xs-letter-spacing;
+	text-indent: $paragraph-xs-paragraph-spacing;
+	text-transform: $paragraph-xs-text-case;
+	text-decoration: $paragraph-xs-text-decoration;
+}
+
+@mixin paragraph-bold {
+	font-family: $paragraph-bold-font-family;
+	font-weight: $paragraph-bold-font-weight;
+	line-height: $paragraph-bold-line-height;
+	font-size: $paragraph-bold-font-size;
+	letter-spacing: $paragraph-bold-paragraph-spacing;
+	text-decoration: $paragraph-bold-text-decoration;
+}
+
+@mixin paragraph-sm {
+	font-family: $paragraph-sm-font-family;
+	font-weight: $paragraph-sm-font-weight;
+	line-height: $paragraph-sm-line-height;
+	font-size: $paragraph-sm-font-size;
+	letter-spacing: $paragraph-sm-letter-spacing;
+	text-indent: $paragraph-sm-paragraph-spacing;
+	text-transform: $paragraph-sm-text-case;
+	text-decoration: $paragraph-sm-text-decoration;
+}
+
+@mixin paragraph-sm-bold {
+	font-family: $paragraph-sm-bold-font-family;
+	font-weight: $paragraph-sm-bold-font-weight;
+	line-height: $paragraph-sm-bold-line-height;
+	font-size: $paragraph-sm-bold-font-size;
+	letter-spacing: $paragraph-sm-bold-letter-spacing;
+	text-indent: $paragraph-sm-bold-paragraph-spacing;
+	text-transform: $paragraph-sm-bold-text-case;
+	text-decoration: $paragraph-sm-bold-text-decoration;
+}
+
+@mixin paragraph-sm-light {
+	font-family: $paragraph-sm-light-font-family;
+	font-weight: $paragraph-sm-light-font-weight;
+	line-height: $paragraph-sm-light-line-height;
+	font-size: $paragraph-sm-light-font-size;
+	letter-spacing: $paragraph-sm-light-letter-spacing;
+	text-indent: $paragraph-sm-light-paragraph-spacing;
+	text-transform: $paragraph-sm-light-text-case;
+	text-decoration: $paragraph-sm-light-text-decoration;
+}
+
+@mixin paragraph {
+	font-family: $paragraph-font-family;
+	font-weight: $paragraph-font-weight;
+	line-height: $paragraph-line-height;
+	font-size: $paragraph-font-size;
+	letter-spacing: $paragraph-letter-spacing;
+	text-indent: $paragraph-paragraph-spacing;
+	text-transform: $paragraph-text-case;
+	text-decoration: $paragraph-text-decoration;
+}
+
+p {
+	@include paragraph;
+}
+
+li {
+	@include paragraph;
+}
+
+a {
+	color: $link-blue;
+	text-decoration: none;
+}
+
+// 
+// Dropshadows
+//
+
+@mixin dropshadow-z100 {
+
+	/* offset-x | offset-y | blur-radius | spread-radius | color */
+	box-shadow: $dropshadow-z100-x $dropshadow-z100-y $dropshadow-z100-blur $dropshadow-z100-spread $dropshadow-z100-color;
+}
+
+@mixin dropshadow-z300 {
+
+	/* offset-x | offset-y | blur-radius | spread-radius | color */
+	box-shadow: $dropshadow-z300-x $dropshadow-z300-y $dropshadow-z300-blur $dropshadow-z300-spread $dropshadow-z300-color;
+}
+
+@mixin dropshadow-card {
+
+	/* offset-x | offset-y | blur-radius | spread-radius | color */
+	box-shadow: $dropshadow-card-x $dropshadow-card-y $dropshadow-card-blur $dropshadow-card-spread $dropshadow-card-color;
+}
+
+// 
+// Other Global Elements
+//
+
+@mixin card-with-rounded-corner {
+	max-width: 50%;
+	margin-bottom: $spacing-lg;
+	border-collapse: separate;
+	border-spacing: 0;
+	border: 1px solid $navy-200;
+	border-bottom-right-radius: $card-borderradius;
+
+	@include media("<=sm") {
+		max-width: 100%;
+	}
+}
+
+.disclaimer {
+	@include paragraph-xs;
+	color: $navy-500;
+	background-color: $blue-100;
+	padding: $spacing-md;
+	margin-bottom: $spacing-md;
+	border-radius: $border-radius-lg;
+}
+
+@mixin partner-information-within-table {
+	.partner-information {
+		padding-top: $spacing-lg;
+
+		.rating {
+			color: $navy-900;
+			height: 62px;
+			background-image: url('../../assets/images/icons/circle-tan.svg');
+			background-position: center;
+			background-repeat: no-repeat;
+			font-size: 24px;
+			margin-top: $spacing-md;
+			font-weight: 500;
+		}
+
+		.stars-container {
+			margin-top: $spacing-md;
+			margin-bottom: $spacing-md;
+		}
+
+		a.le-button-ghost {
+			display: inline-block;
+		}
+
+		.button-label {
+			@include paragraph-xs;
+
+			margin-top: $spacing-sm;
+			color: $gray-600;
+		}
+	}
+}
